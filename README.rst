@@ -13,6 +13,21 @@ A place to get some help.
 
 :License: MIT
 
+Running Locally
+---------------
+Start redis-server ::
+
+    $ redis-server
+
+Using heroku local will start celery automatically ::
+
+    $ heroku local
+
+which is equivalent to ::
+
+    $ celery -A config.celery_app worker -l info
+    $ python manage.py runserver
+
 
 Settings
 --------
@@ -136,7 +151,3 @@ Heroku
 See detailed `cookiecutter-django Heroku documentation`_.
 
 .. _`cookiecutter-django Heroku documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-on-heroku.html
-
-
-
-
