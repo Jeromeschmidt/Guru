@@ -15,6 +15,10 @@ A place to get some help.
 
 Running Locally
 ---------------
+Create a postgres database ::
+
+    $ createdb guru
+
 Start redis-server ::
 
     $ redis-server
