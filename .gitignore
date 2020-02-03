@@ -289,3 +289,6 @@ guru/media/
 .env
 .envs/*
 !.envs/.local/
+
+
+dump.rdb
