@@ -1,0 +1,5 @@
+[run]
+include = guru/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin
