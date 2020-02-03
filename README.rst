@@ -3,6 +3,8 @@ Guru
 
 A place to get some help.
 
+.. image:: https://travis-ci.com/Jeromeschmidt/Guru.svg?branch=master
+    :target: https://travis-ci.com/Jeromeschmidt/Guru
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/
      :alt: Built with Cookiecutter Django
