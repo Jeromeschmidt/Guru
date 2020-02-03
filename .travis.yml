@@ -15,4 +15,4 @@ install:
   - pip install -r requirements/local.txt
   - pip install coverage
 script:
-  - "pytest"
+  - "coverage run -m pytest"
