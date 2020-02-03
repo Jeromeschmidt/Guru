@@ -13,8 +13,6 @@ A place to get some help.
      :alt: Black code style
 .. image:: https://static.deepsource.io/deepsource-badge-light-mini.svg
     :target: https://deepsource.io/gh/Jeromeschmidt/Guru/?ref=repository-badge
-.. image:: https://coveralls.io/repos/github/Jeromeschmidt/Guru/badge.svg?branch=master
-:target: https://coveralls.io/github/Jeromeschmidt/Guru?branch=master
 .. image:: https://codecov.io/gh/Jeromeschmidt/Guru/branch/master/graph/badge.svg
   :target: https://codecov.io/gh/Jeromeschmidt/Guru
 
