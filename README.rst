@@ -11,6 +11,10 @@ A place to get some help.
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
      :target: https://github.com/ambv/black
      :alt: Black code style
+.. image:: https://static.deepsource.io/deepsource-badge-light-mini.svg
+    :target: https://deepsource.io/gh/Jeromeschmidt/Guru/?ref=repository-badge
+.. image:: https://coveralls.io/repos/github/Jeromeschmidt/Guru/badge.svg?branch=master
+:target: https://coveralls.io/github/Jeromeschmidt/Guru?branch=master
 
 
 :License: MIT
