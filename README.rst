@@ -15,6 +15,8 @@ A place to get some help.
 .. image:: https://img.shields.io/badge/code%20style-yapf-blue
     :target: https://github.com/google/yapf
     :alt: Code style: yapf
+.. image:: https://img.shields.io/github/languages/top/JeromeSchmidt/Guru   
+    :alt: GitHub top language
 
 
 :License: MIT
