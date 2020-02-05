@@ -17,6 +17,9 @@ A place to get some help.
     :alt: Code style: yapf
 .. image:: https://img.shields.io/github/languages/top/JeromeSchmidt/Guru   
     :alt: GitHub top language
+.. image:: https://img.shields.io/github/license/Jeromeschmidt/Guru   
+    :alt: GitHub license   
+    :target: https://github.com/Jeromeschmidt/Guru/blob/master/LICENSE
 
 
 :License: MIT
