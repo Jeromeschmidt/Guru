@@ -36,7 +36,9 @@ class TestUserUpdateView:
 
 
 class TestUserRedirectView:
-    def test_get_redirect_url(self, user: User, request_factory: RequestFactory):
+
+    def test_get_redirect_url(self, user: User,
+                              request_factory: RequestFactory):
         view = UserRedirectView()
         request = request_factory.get("/fake-url")
         request.user = user

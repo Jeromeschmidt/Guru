@@ -4,9 +4,8 @@ Base settings to build other settings files upon.
 
 import environ
 
-ROOT_DIR = (
-    environ.Path(__file__) - 3
-)  # (guru/config/settings/base.py - 3 = guru/)
+ROOT_DIR = (environ.Path(__file__) - 3
+           )  # (guru/config/settings/base.py - 3 = guru/)
 APPS_DIR = ROOT_DIR.path("guru")
 
 env = environ.Env()
@@ -42,9 +41,7 @@ LOCALE_PATHS = [ROOT_DIR.path("locale")]
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
-DATABASES = {
-    "default": env.db("DATABASE_URL", default="postgres:///guru")
-}
+DATABASES = {"default": env.db("DATABASE_URL", default="postgres:///guru")}
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
 # URLS
@@ -114,11 +111,20 @@ PASSWORD_HASHERS = [
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
+        "NAME":
+            "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
     },
-    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
-    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
+    {
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"
+    },
+    {
+        "NAME":
+            "django.contrib.auth.password_validation.CommonPasswordValidator"
+    },
+    {
+        "NAME":
+            "django.contrib.auth.password_validation.NumericPasswordValidator"
+    },
 ]
 
 # MIDDLEWARE
@@ -160,34 +166,32 @@ MEDIA_URL = "/media/"
 # TEMPLATES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#templates
-TEMPLATES = [
-    {
-        # https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-TEMPLATES-BACKEND
-        "BACKEND": "django.template.backends.django.DjangoTemplates",
-        # https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
-        "DIRS": [str(APPS_DIR.path("templates"))],
-        "OPTIONS": {
-            # https://docs.djangoproject.com/en/dev/ref/settings/#template-loaders
-            # https://docs.djangoproject.com/en/dev/ref/templates/api/#loader-types
-            "loaders": [
-                "django.template.loaders.filesystem.Loader",
-                "django.template.loaders.app_directories.Loader",
-            ],
-            # https://docs.djangoproject.com/en/dev/ref/settings/#template-context-processors
-            "context_processors": [
-                "django.template.context_processors.debug",
-                "django.template.context_processors.request",
-                "django.contrib.auth.context_processors.auth",
-                "django.template.context_processors.i18n",
-                "django.template.context_processors.media",
-                "django.template.context_processors.static",
-                "django.template.context_processors.tz",
-                "django.contrib.messages.context_processors.messages",
-                "guru.utils.context_processors.settings_context",
-            ],
-        },
-    }
-]
+TEMPLATES = [{
+    # https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-TEMPLATES-BACKEND
+    "BACKEND": "django.template.backends.django.DjangoTemplates",
+    # https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
+    "DIRS": [str(APPS_DIR.path("templates"))],
+    "OPTIONS": {
+        # https://docs.djangoproject.com/en/dev/ref/settings/#template-loaders
+        # https://docs.djangoproject.com/en/dev/ref/templates/api/#loader-types
+        "loaders": [
+            "django.template.loaders.filesystem.Loader",
+            "django.template.loaders.app_directories.Loader",
+        ],
+        # https://docs.djangoproject.com/en/dev/ref/settings/#template-context-processors
+        "context_processors": [
+            "django.template.context_processors.debug",
+            "django.template.context_processors.request",
+            "django.contrib.auth.context_processors.auth",
+            "django.template.context_processors.i18n",
+            "django.template.context_processors.media",
+            "django.template.context_processors.static",
+            "django.template.context_processors.tz",
+            "django.contrib.messages.context_processors.messages",
+            "guru.utils.context_processors.settings_context",
+        ],
+    },
+}]
 # http://django-crispy-forms.readthedocs.io/en/latest/install.html#template-packs
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
@@ -210,9 +214,8 @@ X_FRAME_OPTIONS = "DENY"
 # EMAIL
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
-EMAIL_BACKEND = env(
-    "DJANGO_EMAIL_BACKEND", default="django.core.mail.backends.smtp.EmailBackend"
-)
+EMAIL_BACKEND = env("DJANGO_EMAIL_BACKEND",
+                    default="django.core.mail.backends.smtp.EmailBackend")
 # https://docs.djangoproject.com/en/2.2/ref/settings/#email-timeout
 EMAIL_TIMEOUT = 5
 
@@ -236,7 +239,7 @@ LOGGING = {
     "formatters": {
         "verbose": {
             "format": "%(levelname)s %(asctime)s %(module)s "
-            "%(process)d %(thread)d %(message)s"
+                      "%(process)d %(thread)d %(message)s"
         }
     },
     "handlers": {
@@ -246,7 +249,10 @@ LOGGING = {
             "formatter": "verbose",
         }
     },
-    "root": {"level": "INFO", "handlers": ["console"]},
+    "root": {
+        "level": "INFO",
+        "handlers": ["console"]
+    },
 }
 
 # Celery

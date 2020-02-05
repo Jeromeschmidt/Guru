@@ -20,6 +20,7 @@ black==19.10b0  # https://github.com/ambv/black
 pylint-django==2.0.13  # https://github.com/PyCQA/pylint-django
 pylint-celery==0.3  # https://github.com/PyCQA/pylint-celery
 pre-commit==1.21.0  # https://github.com/pre-commit/pre-commit
+yapf # https://github.com/google/yapf
 
 # Django
 # ------------------------------------------------------------------------------

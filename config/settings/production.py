@@ -6,7 +6,6 @@ from sentry_sdk.integrations.django import DjangoIntegration
 from sentry_sdk.integrations.logging import LoggingIntegration
 from sentry_sdk.integrations.celery import CeleryIntegration
 
-
 from .base import *  # noqa
 from .base import env
 
@@ -15,13 +14,15 @@ from .base import env
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["helpguru.herokuapp.cpm"])
+ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS",
+                         default=["helpguru.herokuapp.cpm"])
 
 # DATABASES
 # ------------------------------------------------------------------------------
 DATABASES["default"] = env.db("DATABASE_URL")  # noqa F405
 DATABASES["default"]["ATOMIC_REQUESTS"] = True  # noqa F405
-DATABASES["default"]["CONN_MAX_AGE"] = env.int("CONN_MAX_AGE", default=60)  # noqa F405
+DATABASES["default"]["CONN_MAX_AGE"] = env.int("CONN_MAX_AGE",
+                                               default=60)  # noqa F405
 
 # CACHES
 # ------------------------------------------------------------------------------
@@ -54,14 +55,12 @@ CSRF_COOKIE_SECURE = True
 SECURE_HSTS_SECONDS = 60
 # https://docs.djangoproject.com/en/dev/ref/settings/#secure-hsts-include-subdomains
 SECURE_HSTS_INCLUDE_SUBDOMAINS = env.bool(
-    "DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS", default=True
-)
+    "DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS", default=True)
 # https://docs.djangoproject.com/en/dev/ref/settings/#secure-hsts-preload
 SECURE_HSTS_PRELOAD = env.bool("DJANGO_SECURE_HSTS_PRELOAD", default=True)
 # https://docs.djangoproject.com/en/dev/ref/middleware/#x-content-type-options-nosniff
-SECURE_CONTENT_TYPE_NOSNIFF = env.bool(
-    "DJANGO_SECURE_CONTENT_TYPE_NOSNIFF", default=True
-)
+SECURE_CONTENT_TYPE_NOSNIFF = env.bool("DJANGO_SECURE_CONTENT_TYPE_NOSNIFF",
+                                       default=True)
 
 # STORAGES
 # ------------------------------------------------------------------------------
@@ -79,7 +78,8 @@ AWS_QUERYSTRING_AUTH = False
 _AWS_EXPIRY = 60 * 60 * 24 * 7
 # https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html#settings
 AWS_S3_OBJECT_PARAMETERS = {
-    "CacheControl": f"max-age={_AWS_EXPIRY}, s-maxage={_AWS_EXPIRY}, must-revalidate"
+    "CacheControl":
+        f"max-age={_AWS_EXPIRY}, s-maxage={_AWS_EXPIRY}, must-revalidate"
 }
 #  https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html#settings
 AWS_DEFAULT_ACL = None
@@ -127,15 +127,12 @@ TEMPLATES[-1]["OPTIONS"]["loaders"] = [  # type: ignore[index] # noqa F405
 # EMAIL
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-from-email
-DEFAULT_FROM_EMAIL = env(
-    "DJANGO_DEFAULT_FROM_EMAIL", default="Guru <noreply@helpguru.herokuapp.cpm>"
-)
+DEFAULT_FROM_EMAIL = env("DJANGO_DEFAULT_FROM_EMAIL",
+                         default="Guru <noreply@helpguru.herokuapp.cpm>")
 # https://docs.djangoproject.com/en/dev/ref/settings/#server-email
 SERVER_EMAIL = env("DJANGO_SERVER_EMAIL", default=DEFAULT_FROM_EMAIL)
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-subject-prefix
-EMAIL_SUBJECT_PREFIX = env(
-    "DJANGO_EMAIL_SUBJECT_PREFIX", default="[Guru]"
-)
+EMAIL_SUBJECT_PREFIX = env("DJANGO_EMAIL_SUBJECT_PREFIX", default="[Guru]")
 
 # ADMIN
 # ------------------------------------------------------------------------------
@@ -149,9 +146,12 @@ INSTALLED_APPS += ["anymail"]  # noqa F405
 EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
 # https://anymail.readthedocs.io/en/stable/installation/#anymail-settings-reference
 ANYMAIL = {
-    "MAILGUN_API_KEY": env("MAILGUN_API_KEY"),
-    "MAILGUN_SENDER_DOMAIN": env("MAILGUN_DOMAIN"),
-    "MAILGUN_API_URL": env("MAILGUN_API_URL", default="https://api.mailgun.net/v3"),
+    "MAILGUN_API_KEY":
+        env("MAILGUN_API_KEY"),
+    "MAILGUN_SENDER_DOMAIN":
+        env("MAILGUN_DOMAIN"),
+    "MAILGUN_API_URL":
+        env("MAILGUN_API_URL", default="https://api.mailgun.net/v3"),
 }
 
 # django-compressor
@@ -179,7 +179,7 @@ LOGGING = {
     "formatters": {
         "verbose": {
             "format": "%(levelname)s %(asctime)s %(module)s "
-            "%(process)d %(thread)d %(message)s"
+                      "%(process)d %(thread)d %(message)s"
         }
     },
     "handlers": {
@@ -189,7 +189,10 @@ LOGGING = {
             "formatter": "verbose",
         }
     },
-    "root": {"level": "INFO", "handlers": ["console"]},
+    "root": {
+        "level": "INFO",
+        "handlers": ["console"]
+    },
     "loggers": {
         "django.db.backends": {
             "level": "ERROR",
@@ -197,7 +200,11 @@ LOGGING = {
             "propagate": False,
         },
         # Errors logged by the SDK itself
-        "sentry_sdk": {"level": "ERROR", "handlers": ["console"], "propagate": False},
+        "sentry_sdk": {
+            "level": "ERROR",
+            "handlers": ["console"],
+            "propagate": False
+        },
         "django.security.DisallowedHost": {
             "level": "ERROR",
             "handlers": ["console"],
@@ -217,7 +224,9 @@ sentry_logging = LoggingIntegration(
 )
 sentry_sdk.init(
     dsn=SENTRY_DSN,
-    integrations=[sentry_logging, DjangoIntegration(), CeleryIntegration()],
+    integrations=[sentry_logging,
+                  DjangoIntegration(),
+                  CeleryIntegration()],
 )
 
 # Your stuff...
