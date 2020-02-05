@@ -8,13 +8,13 @@ A place to get some help.
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/
      :alt: Built with Cookiecutter Django
-.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
-     :target: https://github.com/ambv/black
-     :alt: Black code style
 .. image:: https://static.deepsource.io/deepsource-badge-light-mini.svg
     :target: https://deepsource.io/gh/Jeromeschmidt/Guru/?ref=repository-badge
 .. image:: https://codecov.io/gh/Jeromeschmidt/Guru/branch/master/graph/badge.svg
   :target: https://codecov.io/gh/Jeromeschmidt/Guru
+.. image:: https://img.shields.io/badge/code%20style-yapf-blue
+    :target: https://github.com/google/yapf
+    :alt: Code style: yapf
 
 
 :License: MIT
