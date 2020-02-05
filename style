@@ -1,0 +1,1 @@
+yapf -ir . --style "google" && echo "reformat complete"
