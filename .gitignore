@@ -285,10 +285,10 @@ guru/media/
 
 .pytest_cache/
 
-
+guru/share
 .env
 .envs/*
 !.envs/.local/
-
+.vscode
 
 dump.rdb
