@@ -20,8 +20,6 @@ A place to get some help.
 .. image:: https://img.shields.io/github/license/Jeromeschmidt/Guru   
     :alt: GitHub license   
     :target: https://github.com/Jeromeschmidt/Guru/blob/master/LICENSE
-
-
 :License: MIT
 
 Running Locally
