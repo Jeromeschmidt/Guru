@@ -1,1 +1,3 @@
+#!/bin/bash
+# A shell script for reformatting everything under root with google style
 yapf -ir . --style "google" && echo "reformat complete"
