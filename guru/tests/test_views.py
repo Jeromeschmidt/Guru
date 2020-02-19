@@ -1,16 +1,21 @@
-from django.test import Client
+from django.test import RequestFactory, TestCase
 
 from guru.views import HomeView
 
 
-class TestHomeView:
+class TestHomeView(TestCase):
 
     def test_canary(self):
         assert True is True
 
-    def test_get_success_url(self):
-        # c = Client()
-        # response = c.get("")
-        # assert response.status_code == 200
-        # assert 3 == 3
-        pass
+    def test_successful_load(self):
+        request = self.client.get('/')
+        self.assertEqual(request.status_code, 200)
+
+    def test_title_set_in_context(self):
+        request = RequestFactory().get('/')
+        view = HomeView()
+        view.setup(request)
+
+        context = view.get_context_data()
+        self.assertIn('title', context)
