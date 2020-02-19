@@ -98,6 +98,20 @@
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
+                    {# Language dropdown #}
+                    <a id="lang-dropdown" class='dropdown-trigger btn' href='#' data-target='dropdown1'>En</a>
+
+                    {# Language options #}
+                    <ul id='dropdown1' class='dropdown-content'>
+                      <li><a href="https://fr.guru.tinydoor.co">Fr</a></li>
+                      <li><a href="https://de.guru.tinydoor.co">De</a></li>
+                      <li><a href="https://ja.guru.tinydoor.co">Ja</a></li>
+                      <li><a href="https://zh.guru.tinydoor.co">Zh</a></li>
+                      <li><a href="https://es.guru.tinydoor.co">Es</a></li>
+                    </ul>
+
+                </li>
+                <li class="nav-item">
                     <a href="{% url 'account_signup' %}" class="nav-link">
                         Sign Up
                     </a>
