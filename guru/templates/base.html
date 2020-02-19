@@ -85,7 +85,7 @@
 <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg"  color-on-scroll="100">
     <div class="container">
         <div class="navbar-translate">
-            <a class="navbar-brand">Guru </a>
+            <a class="navbar-brand">Guru</a>
 
             <button class="navbar-toggler' %}" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="sr-only">Toggle navigation</span>
@@ -99,16 +99,18 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     {# Language dropdown #}
-                    <a id="lang-dropdown" class='dropdown-trigger btn' href='#' data-target='dropdown1'>En</a>
-
-                    {# Language options #}
-                    <ul id='dropdown1' class='dropdown-content'>
-                      <li><a href="https://fr.guru.tinydoor.co">Fr</a></li>
-                      <li><a href="https://de.guru.tinydoor.co">De</a></li>
-                      <li><a href="https://ja.guru.tinydoor.co">Ja</a></li>
-                      <li><a href="https://zh.guru.tinydoor.co">Zh</a></li>
-                      <li><a href="https://es.guru.tinydoor.co">Es</a></li>
-                    </ul>
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        En
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="https://fr.guru.tinydoor.co">Fr</a>
+                        <a class="dropdown-item" href="https://de.guru.tinydoor.co">De</a>
+                        <a class="dropdown-item" href="https://ja.guru.tinydoor.co">Ja</a>
+                        <a class="dropdown-item" href="https://zh.guru.tinydoor.co">Zh</a>
+                        <a class="dropdown-item" href="https://es.guru.tinydoor.co">Es</a>
+                      </div>
+                    </div>
 
                 </li>
                 <li class="nav-item">
@@ -182,7 +184,6 @@
 <script src="{% static 'js/project.js' %}"></script>
 
 {# Mapbox #}
-<div id='map' style='width: 400px; height: 300px;'></div>
 <script>
 // --------------------------
 // Setup mapbox
