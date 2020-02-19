@@ -139,7 +139,9 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
       {% endcomment %}
       <!-- Your stuff: Third-party javascript libraries go here -->
-
+      {% comment %}  Google Maps Plugin  {% endcomment %}
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
 
       <!-- place project specific Javascript in this file -->
       {% compress js %}
@@ -151,10 +153,7 @@
       <script src="{% static 'js/plugins/bootstrap-datetimepicker.js' %}" type="text/javascript"></script>
       {% comment %}  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ {% endcomment %}
       <script src="{% static 'js/plugins/nouislider.min.js' %}" type="text/javascript"></script>
-      {% comment %}  Google Maps Plugin  {% endcomment %}
-      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-      {% comment %} Place this tag in your head or just before your close body tag. {% endcomment %}
-      <script async defer src="https://buttons.github.io/buttons.js"></script>
+
       {% comment %} Control Center for Material Kit: parallax effects, scripts for the example pages etc {% endcomment %}
       <script src="{% static 'js/material-kit.js' %}?v=2.0.6" type="text/javascript"></script>
       <script src="{% static 'js/project.js' %}"></script>
