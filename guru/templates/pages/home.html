@@ -9,8 +9,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h1 class="title">Help Begins With Us.</h1>
-        <h4>Every landing page needs a small description after the big bold title, that&apos;s why we added this text here. Add here all the information that can make you or your product create the first impression.</h4>
+        <h1 class="title">Guru</h1>
+        <h4>An app that helps you find help! Connection with those who will help you is made easy with Guru, a sorta Tinder for coding help!</h4>
         <br>
         <a href="{% url 'account_signup' %}" target="_blank" class="btn btn-info btn-raised btn-lg">
           Sign Up
@@ -27,18 +27,21 @@
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
           <h2 class="title">Let&apos;s talk product</h2>
-          <h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn&apos;t scroll to get here. Add a button if you want the user to see more.</h5>
+          <h5 class="description">Guru is meant to help people connect and help one another with coding problems. We match them up with people we believe that can help our users while also giving them the option to accept or decline.
+              <br>!!!Warning!!!<br>
+              Currently only a tool for Make School students ONLY.
+          </h5>
         </div>
       </div>
       <div class="features">
         <div class="row">
           <div class="col-md-4">
             <div class="info">
-              <div class="icon icon-warning">
+              <div class="icon icon-info">
                 <i class="material-icons">chat</i>
               </div>
-              <h4 class="info-title">Free Chat</h4>
-              <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+              <h4 class="info-title">Connections done easy</h4>
+              <p>Help is done simply by selecting the field in which the problem is and describing the problem. An email is premade and sent on behalf of the user</p>
             </div>
           </div>
           <div class="col-md-4">
@@ -47,16 +50,16 @@
                 <i class="material-icons">verified_user</i>
               </div>
               <h4 class="info-title">Verified Users</h4>
-              <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+              <p>Users will be able to connect to people who know will help(Currently). In the future we hope that users will help one another. </p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="info">
-              <div class="icon icon-info">
+              <div class="icon icon-default">
                 <i class="material-icons">help</i>
               </div>
               <h4 class="info-title">Help</h4>
-              <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+              <p>Help is given by our wonderful TA's at Make School and are love to help you solve problems</p>
             </div>
           </div>
         </div>
@@ -71,7 +74,7 @@
             <div class="team-player">
               <div class="card card-plain">
                 <div class="col-md-6 ml-auto mr-auto">
-                  <img src="{% static 'images/favicons/avatar.jpg' %}" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  <img src="{% static 'images/favicons/quavo.jpeg' %}" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                 </div>
                 <h4 class="card-title">Quavo
                   <br>
@@ -82,7 +85,7 @@
                     <a href="#">links</a> for people to be able to follow them outside the site.</p>
                 </div>
                 <div class="card-footer justify-content-center">
-                  <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.linkedin.com/in/jarquevious-nelson/" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
                   <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
                   <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
                 </div>
@@ -93,7 +96,7 @@
             <div class="team-player">
               <div class="card card-plain">
                 <div class="col-md-6 ml-auto mr-auto">
-                  <img src="{% static 'images/favicons/profile_city.jpg' %}" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  <img src="{% static 'images/favicons/jonasz.jpeg' %}" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                 </div>
                 <h4 class="card-title">Jonasz
                   <br>
@@ -104,8 +107,10 @@
                     <a href="#">links</a> for people to be able to follow them outside the site.</p>
                 </div>
                 <div class="card-footer justify-content-center">
-                  <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                  <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
+                  {% comment %}
+                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
+                {% endcomment %}
+                  <a href="https://www.linkedin.com/in/jonasz-karwacki/" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -114,7 +119,7 @@
             <div class="team-player">
               <div class="card card-plain">
                 <div class="col-md-6 ml-auto mr-auto">
-                  <img src="{% static 'images/favicons/city.jpg' %}" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  <img src="{% static 'images/favicons/jerome.jpeg' %}" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                 </div>
                 <h4 class="card-title">Jerome
                   <br>
@@ -124,7 +129,7 @@
                   <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
                     <a href="#">links</a> for people to be able to follow them outside the site.</p>
           <div class="card-footer justify-content-center">
-            <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/jerome-schmidt3/" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
             <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
             <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
           </div>
