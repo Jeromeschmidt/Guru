@@ -15,10 +15,10 @@ A place to get some help.
 .. image:: https://img.shields.io/badge/code%20style-yapf-blue
     :target: https://github.com/google/yapf
     :alt: Code style: yapf
-.. image:: https://img.shields.io/github/languages/top/JeromeSchmidt/Guru   
+.. image:: https://img.shields.io/github/languages/top/JeromeSchmidt/Guru
     :alt: GitHub top language
-.. image:: https://img.shields.io/github/license/Jeromeschmidt/Guru   
-    :alt: GitHub license   
+.. image:: https://img.shields.io/github/license/Jeromeschmidt/Guru
+    :alt: GitHub license
     :target: https://github.com/Jeromeschmidt/Guru/blob/master/LICENSE
 :License: MIT
 
@@ -160,6 +160,8 @@ The following details how to deploy this application.
 
 Heroku
 ^^^^^^
+.. image:: https://www.herokucdn.com/deploy/button.svg
+    :target: https://heroku.com/deploy
 
 See detailed `cookiecutter-django Heroku documentation`_.
 
