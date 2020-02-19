@@ -17,21 +17,21 @@
     <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}">
 
     {% block css %}
-    
+
     <!-- Latest compiled and minified Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet' %}" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 
     <!-- Your stuff: Third-party CSS libraries go here -->
-    
+
     {% compress css %}
     <!-- This file stores project-specific CSS -->
-    
+
     <link href="{% static 'css/material-kit.css' %}?v=2.0.6" rel="stylesheet" />
 
     <link href="{% static 'css/project.css' %}" rel="stylesheet">
-    
+
     {% endcompress %}
     {% endblock %}
 
@@ -78,12 +78,12 @@
       </nav>
     </div>
     {% endcomment %}
-    
+
     <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg"  color-on-scroll="100">
       <div class="container">
         <div class="navbar-translate">
           <a class="navbar-brand">Guru </a>
-          
+
           <button class="navbar-toggler' %}" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="sr-only">Toggle navigation</span>
               <span class="navbar-toggler-icon"></span>
@@ -91,24 +91,24 @@
               <span class="navbar-toggler-icon"></span>
           </button>
         </div>
-      
+
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a href="login.html" class="nav-link">
+                <a href="{% url 'account_signup' %}" class="nav-link">
                   Sign Up
                 </a>
               </li>
               <li class="nav-item">
-                <a href="login.html" class="nav-link">
+                <a href="{% url 'account_login' %}" class="nav-link">
                   <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true">
                     Login
                   </button>
                 </a>
-              </li>           
+              </li>
             </ul>
         </div>
-    
+
       </div>
     </nav>
 
@@ -132,14 +132,14 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     {% block javascript %}
-      
+
       <!-- Bootstrap JS and its dependencies-->
       {% comment %}
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
       {% endcomment %}
       <!-- Your stuff: Third-party javascript libraries go here -->
-      
+
 
       <!-- place project specific Javascript in this file -->
       {% compress js %}
@@ -163,4 +163,3 @@
     {% endblock javascript %}
   </body>
 </html>
- 

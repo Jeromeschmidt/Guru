@@ -9,5 +9,5 @@ from api.views import UserList
 
 
 urlpatterns = [
-    path('guru/', UserList.as_view(), name='guru_list'),
+    path('help/', UserList.as_view(), name='help_list'),
 ]
