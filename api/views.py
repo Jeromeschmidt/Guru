@@ -11,6 +11,7 @@ from api.serializers import UserSerializer
 
 
 class UserList(APIView):
+
     def get(self, request):
         user = User.objects.all()[:20]
         data = UserSerializer(user, many=True).data
@@ -18,6 +19,7 @@ class UserList(APIView):
 
 
 class UserDetail(APIView):
+
     def get(self, request, pk):
         user = get_object_or_404(User, pk=pk)
         data = UserSerializer(user).data

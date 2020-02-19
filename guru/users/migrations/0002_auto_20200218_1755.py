@@ -39,11 +39,15 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='user',
             name='support_classes_taken',
-            field=django.contrib.postgres.fields.ArrayField(base_field=models.CharField(max_length=255), null=True, size=20),
+            field=django.contrib.postgres.fields.ArrayField(
+                base_field=models.CharField(max_length=255), null=True,
+                size=20),
         ),
         migrations.AddField(
             model_name='user',
             name='support_skills',
-            field=django.contrib.postgres.fields.ArrayField(base_field=models.CharField(max_length=255), null=True, size=20),
+            field=django.contrib.postgres.fields.ArrayField(
+                base_field=models.CharField(max_length=255), null=True,
+                size=20),
         ),
     ]

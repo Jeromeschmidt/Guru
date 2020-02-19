@@ -10,8 +10,12 @@ class User(AbstractUser):
     # First Name and Last Name do not cover name patterns
     # around the globe.
     name = CharField(_("Name of User"), blank=True, max_length=255)
-    support_skills = ArrayField(null=True, base_field=CharField(max_length=255), size=20)
-    support_classes_taken = ArrayField(null=True, base_field=CharField(max_length=255), size=20)
+    support_skills = ArrayField(null=True,
+                                base_field=CharField(max_length=255),
+                                size=20)
+    support_classes_taken = ArrayField(null=True,
+                                       base_field=CharField(max_length=255),
+                                       size=20)
     email_address = CharField(max_length=100, default="")
     is_teachingassistant = (('F', 'False'), ('T', 'True'))
     rating = IntegerField(null=True, blank=True)

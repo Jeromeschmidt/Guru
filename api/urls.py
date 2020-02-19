@@ -7,7 +7,6 @@ from api.views import UserList
 #     path('guru/users/<str:username>/', UserDetail.as_view(), name='user_detail')
 # ]
 
-
 urlpatterns = [
     path('help/', UserList.as_view(), name='help_list'),
 ]

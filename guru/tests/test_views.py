@@ -2,7 +2,9 @@ from django.test import Client
 
 from guru.views import HomeView
 
+
 class TestHomeView:
+
     def test_canary(self):
         assert True is True
 
