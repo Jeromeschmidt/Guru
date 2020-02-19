@@ -99,7 +99,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     {# Language dropdown #}
-                    <div class="dropdown">
+                    <div id="lang-dropdown" class="dropdown">
                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         En
                       </button>
@@ -185,21 +185,22 @@
 
 {# Mapbox #}
 <script>
-// --------------------------
-// Setup mapbox
-// --------------------------
+/* --------------------------
+    Setup mapbox
+   -------------------------- */
 mapboxgl.accessToken = 'pk.eyJ1IjoiZXNjb2ZyZXNjbyIsImEiOiJjanIybzM1ZzUwMm56NDNyMnE2OHo4ZjJkIn0.m58inJeAA0EUbAR9zUYHGA';
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11'
 });
 
-// --------------------------
-// Setup WEGLOT Localization
-// --------------------------
+/* --------------------------
+    Setup WEGLOT Localization
+   -------------------------- */
 Weglot.initialize({
     api_key: 'wg_ec3eadf9b1db8bebfa2740a7a21751aa5'
 });
+
 </script>
 {% endcompress %}
 
