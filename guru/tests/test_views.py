@@ -10,7 +10,8 @@ class TestHomeView(TestCase):
 
     def test_successful_load(self):
         request = self.client.get('/')
-        self.assertEqual(request.status_code, 200)
+        # self.assertEqual(request.status_code, 200)
+        assert request.status_code == 200
 
     def test_title_set_in_context(self):
         request = RequestFactory().get('/')
@@ -18,4 +19,5 @@ class TestHomeView(TestCase):
         view.setup(request)
 
         context = view.get_context_data()
-        self.assertIn('title', context)
+        assert "title" in context
+        assert context.get("title") == "Help Guru"
