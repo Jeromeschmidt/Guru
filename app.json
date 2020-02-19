@@ -1,0 +1,7 @@
+{
+    "name": "help guru",
+    "description": "A destination for finding help with any topic",
+    "repository": "https://github.com/Jeromeschmidt/Guru",
+    "logo": "",
+    "keywords": ["django"]
+}
