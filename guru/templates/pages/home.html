@@ -5,11 +5,65 @@
 {% endblock css %}
 
 {% block content %}
+<nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg"  color-on-scroll="100">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand">Guru </a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="dropdown nav-item show">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="True">Language</a>
+                    <div class="dropdown-menu dropdown-with-icons-show">
+                        <a href="https://fr.guru.tinydoor.co" class="dropdown-item">Fr</a>
+                        <a href="https://de.guru.tinydoor.co" class="dropdown-item">De</a>
+                        <a href="https://ja.guru.tinydoor.co" class="dropdown-item">Ja</a>
+                        <a href="https://zh.guru.tinydoor.co" class="dropdown-item">Zh</a>
+                        <a href="https://es.guru.tinydoor.co" class="dropdown-item">Es</a>
+                    </li>
+                    </div> 
+                    {# Language dropdown #}
+                    <!-- <a id="lang-dropdown" class='dropdown-trigger btn' href='#' data-target='dropdown1'>En</a> -->
+
+                    {# Language options #}
+                    <!-- <ul id='dropdown1' class='dropdown-content'>
+                      <li><a href="https://fr.guru.tinydoor.co">Fr</a></li>
+                      <li><a href="https://de.guru.tinydoor.co">De</a></li>
+                      <li><a href="https://ja.guru.tinydoor.co">Ja</a></li>
+                      <li><a href="https://zh.guru.tinydoor.co">Zh</a></li>
+                      <li><a href="https://es.guru.tinydoor.co">Es</a></li>
+                    </ul> -->
+                
+                
+                    <li class="nav-item">
+                    <a href="{% url 'account_signup' %}" class="nav-link">
+                        Sign Up
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="{% url 'account_login' %}" class="nav-link">
+                        <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true">
+                            Login
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+
+
+
 <div id="landerHeader" class="page-header header-filter" data-parallax="true">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h1 class="title">Guru</h1>
+        <h1 class="h1">Guru</h1>
         <h4>An app that helps you find help! Connection with those who will help you is made easy with Guru, a sorta Tinder for coding help!</h4>
         <br>
         <a href="{% url 'account_signup' %}" target="_blank" class="btn btn-info btn-raised btn-lg">
@@ -86,7 +140,7 @@
                 </div>
                 <div class="card-footer justify-content-center">
                   <a href="https://www.linkedin.com/in/jarquevious-nelson/" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
-                  <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
+                  <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-github"></i></a>
                   <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
                 </div>
               </div>
@@ -139,7 +193,7 @@
   </div>
 </div>
 </div>
-    <div class="section section-contacts">
+    <!-- <div class="section section-contacts">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
           <h2 class="text-center title">Work with us</h2>
@@ -173,7 +227,7 @@
           </form>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 
