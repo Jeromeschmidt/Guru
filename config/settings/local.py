@@ -1,3 +1,5 @@
+import os
+
 from .base import *  # noqa
 from .base import env
 
@@ -54,5 +56,6 @@ INSTALLED_APPS += ["django_extensions"]  # noqa F405
 CELERY_TASK_ALWAYS_EAGER = True
 # http://docs.celeryproject.org/en/latest/userguide/configuration.html#task-eager-propagates
 CELERY_TASK_EAGER_PROPAGATES = True
-# Your stuff...
-# ------------------------------------------------------------------------------
+
+# Local local environment variables
+env.read_env(env_file=os.path.join(ROOT_DIR, '.envs/.local/.django'))
