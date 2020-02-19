@@ -22,7 +22,7 @@ class User(AbstractUser):
     avg_reponse = FloatField(null=True, blank=True)
     is_online = (('F', 'False'), ('T', 'True'))
     messages_received = IntegerField(null=True, blank=True)
-    Bio = CharField(blank=True, max_length=500)
+    bio = CharField(blank=True, max_length=500)
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})
