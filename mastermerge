@@ -1,5 +1,6 @@
 #!/bin/bash
 # A shell script for merging the branch passed as an argument with master
+git push origin $1 && \
 git checkout master && \
 git pull origin master && \
 git merge $1 && \
