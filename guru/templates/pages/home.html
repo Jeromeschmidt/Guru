@@ -37,7 +37,7 @@
                 
                 
                     <li class="nav-item">
-                    <a href="{% url 'account_signup' %}" class="nav-link">
+                    <a href="{% url 'account_signup' %}" class="nav-link" >
                         Sign Up
                     </a>
                 </li>
@@ -132,7 +132,7 @@
                 </div>
                 <h4 class="card-title">Quavo
                   <br>
-                  <small class="card-description text-muted">Model</small>
+                  <small class="card-description text-muted">Back-End Web</small>
                 </h4>
                 <div class="card-body">
                   <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
@@ -140,12 +140,14 @@
                 </div>
                 <div class="card-footer justify-content-center">
                   <a href="https://www.linkedin.com/in/jarquevious-nelson/" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
-                  <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-github"></i></a>
-                  <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
+                  <a href="https://github.com/Jarquevious" class="btn btn-link btn-just-icon"><i class="fa fa-github"></i></a>
+                  <!-- <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a> -->
                 </div>
               </div>
             </div>
           </div>
+          
+          
           <div class="col-md-4">
             <div class="team-player">
               <div class="card card-plain">
@@ -154,21 +156,21 @@
                 </div>
                 <h4 class="card-title">Jonasz
                   <br>
-                  <small class="card-description text-muted">Designer</small>
+                  <small class="card-description text-muted">Back-End Web</small>
                 </h4>
                 <div class="card-body">
                   <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
                     <a href="#">links</a> for people to be able to follow them outside the site.</p>
                 </div>
                 <div class="card-footer justify-content-center">
-                  {% comment %}
-                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                {% endcomment %}
-                  <a href="https://www.linkedin.com/in/jonasz-karwacki/" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/jonasz-karwacki/" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://github.com/escofresco" class="btn btn-link btn-just-icon"><i class="fa fa-github"></i></a>
                 </div>
               </div>
             </div>
           </div>
+          
+          
           <div class="col-md-4">
             <div class="team-player">
               <div class="card card-plain">
@@ -177,20 +179,19 @@
                 </div>
                 <h4 class="card-title">Jerome
                   <br>
-                  <small class="card-description text-muted">Model</small>
+                  <small class="card-description text-muted">Back-End Web</small>
                 </h4>
                 <div class="card-body">
                   <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
                     <a href="#">links</a> for people to be able to follow them outside the site.</p>
-          <div class="card-footer justify-content-center">
-            <a href="https://www.linkedin.com/in/jerome-schmidt3/" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
-            <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
-            <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
-          </div>
-        </div>
-      </div>
+                    <div class="card-footer justify-content-center">
+                        <a href="https://www.linkedin.com/in/jerome-schmidt3/" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://github.com/Jeromeschmidt" class="btn btn-link btn-just-icon"><i class="fa fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>  
     </div>
-  </div>
 </div>
 </div>
     <!-- <div class="section section-contacts">
@@ -258,6 +259,7 @@
 {% block javascript %} {{ block.super }}
 <script>
     const bgLoc = "{% static 'images/favicons/bg3.jpg' %}";
+    //const bgLoc = "https://make-school-courses.github.io/BEW-1.2-Authentication-and-Associations/Web/logo-icononly.svg";
     $("#landerHeader").css({"background-image": `url(${bgLoc})`});
 
 </script>
