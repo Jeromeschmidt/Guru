@@ -1,9 +1,10 @@
-from django.test import RequestFactory, TestCase
 import pytest
+from django.test import Client, RequestFactory, TestCase
+from django.urls import reverse
 
 from guru.views import HomeView
 
-# pytestmark = pytest.mark.django_db
+pytestmark = pytest.mark.django_db
 
 class TestHomeView(TestCase):
 
@@ -11,10 +12,9 @@ class TestHomeView(TestCase):
         assert True is True
 
     # def test_successful_load(self):
-    #     #client = Client()
     #     response = self.client.get("/")
-    #     self.assertEqual(request.status_code, 200)
-    #     assert request.status_code == 200
+    #     self.assertEqual(response.status_code, 200)
+
 
     def test_title_set_in_context(self):
         request = RequestFactory().get("/")
