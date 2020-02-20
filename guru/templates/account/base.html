@@ -3,16 +3,30 @@
 {% block title %}{% block head_title %}{% endblock head_title %}{% endblock title %}
 
 {% block content %}
-<nav class="navbar navbar-expand-lg bg-info">
-  <div class="navbar-translate">
-    <a class="navbar-brand">Guru </a>
+<nav class="navbar navbar-color-on-scroll  fixed-top navbar-expand-lg"  color-on-scroll="100">
+  <div class="container">
+    <div class="navbar-translate">
+        <a class="navbar-brand"> Guru </a>
+    </div>
   </div>
 </nav>
-
-<div class="row">
-  <div class="col-md-6 offset-md-3">
-    {% block inner %}{% endblock %}
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+      <div class="card card-login">
+        <div class="card-body">
+          <!-- <div class="input-group"> -->
+              {% block inner %}{% endblock %}
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
 {% endblock %}
 
