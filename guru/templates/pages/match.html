@@ -1,0 +1,48 @@
+{% extend 'base.html' %}
+
+{% load static i18n compress %}
+
+{% block css %} {{ block.super }}
+{% endblock css %}
+
+{% block content %}
+<nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="#">
+          Guru </a>
+      </div>
+    </div>
+</nav>
+<div class="page-header header-filter">
+    <div class="container">
+      <div class="row">
+        <div class="card card-nav-tabs">
+            <div class="card-header card-header-info">
+              <center>Your Helper!</center>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title"><center>Special title treatment</center></h4>
+              <p class="card-text"><center>Match data name etc</center></p>
+            </div>
+            <div class="text-center"> 
+                <button class="btn btn-danger btn-fab btn-fab-mini btn-round btn-lg">
+                    <i class="material-icons">cancel</i>
+                </button> 
+                <button class="btn btn-success btn-fab btn-fab-mini btn-round btn-lg">
+                    <i class="material-icons">check</i>
+                </button>
+            </div>
+            <footer>
+                <button class="btn btn-primary btn-link" href="">Back</button>
+            </footer>
+          </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block javascript %} {{ block.super }}
+
+{% endblock javascript %}
