@@ -1,5 +1,7 @@
 from django.contrib.auth.models import AbstractUser
-from django.db.models import CharField, IntegerField, FloatField
+from django.db.models import (BooleanField, CASCADE, CharField, FloatField,
+                              IntegerField, Model, OneToOneField,
+                              ManyToManyField)
 from django.contrib.postgres.fields import ArrayField
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
@@ -10,19 +12,28 @@ class User(AbstractUser):
     # First Name and Last Name do not cover name patterns
     # around the globe.
     name = CharField(_("Name of User"), blank=True, max_length=255)
-    support_skills = ArrayField(null=True,
-                                base_field=CharField(max_length=255),
-                                size=20)
-    support_classes_taken = ArrayField(null=True,
-                                       base_field=CharField(max_length=255),
-                                       size=20)
-    email_address = CharField(max_length=100, default="")
-    is_teachingassistant = (('F', 'False'), ('T', 'True'))
-    rating = IntegerField(null=True, blank=True)
-    avg_reponse = FloatField(null=True, blank=True)
-    is_online = (('F', 'False'), ('T', 'True'))
-    messages_received = IntegerField(null=True, blank=True)
-    bio = CharField(blank=True, max_length=500)
+    USER_TYPE_CHOICES = (
+        (1, 'customer'),
+        (2, 'staff'),
+        (3, 'admin'),
+    )
+    user_type = models.PositiveSmallIntegerField(choices=USER_TYPE_CHOICES)
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})
+
+
+class Customer(Model):
+    user = OneToOneField(User, on_delete=CASCADE, primary_key=True)
+    # skills = ArrayField(_("A list of skills that user can help with"), null=True,
+    #                     base_field=CharField(max_length=255),
+    #                     size=20)
+    # classes_taken = ArrayField(null=True,
+    #                            base_field=CharField(max_length=255),
+    #                            size=20)
+    # is_teachingassistant = BooleanField()
+    # rating = IntegerField(null=True, blank=True)
+    # avg_reponse = FloatField(null=True, blank=True)
+    # is_online = BooleanField()
+    # messages_received = IntegerField(null=True, blank=True)
+    bio = CharField(blank=True, max_length=500)
