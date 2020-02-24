@@ -228,6 +228,3 @@ sentry_sdk.init(
                   DjangoIntegration(),
                   CeleryIntegration()],
 )
-
-# Your stuff...
-# ------------------------------------------------------------------------------
