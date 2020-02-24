@@ -1,7 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db.models import (BooleanField, CASCADE, CharField, FloatField,
-                              IntegerField, Model, OneToOneField,
-                              ManyToManyField)
+                              IntegerField, ManyToManyField, Model, OneToOneField,
+                              PositiveSmallIntegerField)
 from django.contrib.postgres.fields import ArrayField
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
@@ -17,7 +17,7 @@ class User(AbstractUser):
         (2, 'staff'),
         (3, 'admin'),
     )
-    user_type = models.PositiveSmallIntegerField(choices=USER_TYPE_CHOICES)
+    user_type = PositiveSmallIntegerField(choices=USER_TYPE_CHOICES)
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})
