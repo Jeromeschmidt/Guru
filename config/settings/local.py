@@ -57,5 +57,7 @@ CELERY_TASK_ALWAYS_EAGER = True
 # http://docs.celeryproject.org/en/latest/userguide/configuration.html#task-eager-propagates
 CELERY_TASK_EAGER_PROPAGATES = True
 
+import django_heroku
 # Local local environment variables
-env.read_env(env_file=os.path.join(ROOT_DIR, '.envs/.local/.django'))
+# env.read_env(env_file=os.path.join(ROOT_DIR, '.envs/.local/.django'))
+django_heroku.settings(locals())
