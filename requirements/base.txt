@@ -22,7 +22,8 @@ djangorestframework==3.11.0  # https://github.com/encode/django-rest-framework
 coreapi==2.3.3  # https://github.com/core-api/python-client
 
 # Search
-algoliasearch==2.1.0 # https://www.algolia.com/doc/api-client/getting-started/install/python/?language=python
+algoliasearch==1.20.0 # https://www.algolia.com/doc/api-client/getting-started/install/python/?language=python
+algoliasearch-django==1.7.1 # https://www.algolia.com/doc/framework-integration/django/setup/?language=python
 
 # Asynchronous
 async-timeout==3.0.1
