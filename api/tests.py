@@ -27,10 +27,10 @@ class AccountsTestCase(TestCase):
     def api_can_update(self):
         """Test the api can update a given bucketlist."""
         person1 = User(name="test person1",
-                       Bio="test person1",
+                       bio="test person1",
                        contact_info="test person")
         person2 = User(name="test person2",
-                       Bio="test person2",
+                       bio="test person2",
                        contact_info="test person")
         person1.save()
         person2.save()
