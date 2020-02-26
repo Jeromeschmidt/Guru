@@ -4,8 +4,8 @@ Base settings to build other settings files upon.
 
 import environ
 
-ROOT_DIR = (environ.Path(__file__) - 3
-           )  # (guru/config/settings/base.py - 3 = guru/)
+ROOT_DIR = (environ.Path(__file__) - 3)
+# (guru/config/settings/base.py - 3 = guru/)
 APPS_DIR = ROOT_DIR.path("guru")
 
 env = environ.Env()
@@ -291,6 +291,14 @@ ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_ADAPTER = "guru.users.adapters.AccountAdapter"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 SOCIALACCOUNT_ADAPTER = "guru.users.adapters.SocialAccountAdapter"
+
+# SLACK API Configurations
+# ----------------------------------------------
+# use your keys
+SLACK_CLIENT_ID = '964294885047.950966324451'
+SLACK_CLIENT_SECRET = '9ec9fa84071026e86863214c0827b676'
+SLACK_VERIFICATION_TOKEN = 'aEWYqzEFrFv45q6FQQ5KIthI'
+SLACK_BOT_USER_TOKEN = 'xoxb-964294885047-964649805574-vRWyhknI7SG0o8inadasLi00'
 
 # django-compressor
 # ------------------------------------------------------------------------------
