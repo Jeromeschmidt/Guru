@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 
 # Create your tests here.
 class AccountsTestCase(TestCase):
+
     def test_true_is_true(self):
         """ Tests if True is equal to True. Should always pass. """
         self.assertEqual(True, True)
@@ -25,8 +26,12 @@ class AccountsTestCase(TestCase):
 
     def api_can_update(self):
         """Test the api can update a given bucketlist."""
-        person1 = User(name="test person1", Bio="test person1", contact_info="test person")
-        person2 = User(name="test person2", Bio="test person2", contact_info="test person")
+        person1 = User(name="test person1",
+                       Bio="test person1",
+                       contact_info="test person")
+        person2 = User(name="test person2",
+                       Bio="test person2",
+                       contact_info="test person")
         person1.save()
         person2.save()
         # update_person = self.client.put(

@@ -1,5 +1,7 @@
 import os
 
+import django_heroku
+
 from .base import *  # noqa
 from .base import env
 
@@ -58,4 +60,5 @@ CELERY_TASK_ALWAYS_EAGER = True
 CELERY_TASK_EAGER_PROPAGATES = True
 
 # Local local environment variables
-env.read_env(env_file=os.path.join(ROOT_DIR, '.envs/.local/.django'))
+# env.read_env(env_file=os.path.join(ROOT_DIR, '.envs/.local/.django'))
+django_heroku.settings(locals())

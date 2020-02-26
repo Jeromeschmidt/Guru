@@ -1,7 +1,7 @@
 import logging
 
+import django_heroku
 import sentry_sdk
-
 from sentry_sdk.integrations.django import DjangoIntegration
 from sentry_sdk.integrations.logging import LoggingIntegration
 from sentry_sdk.integrations.celery import CeleryIntegration
@@ -228,6 +228,4 @@ sentry_sdk.init(
                   DjangoIntegration(),
                   CeleryIntegration()],
 )
-
-# Your stuff...
-# ------------------------------------------------------------------------------
+django_heroku.settings(locals())

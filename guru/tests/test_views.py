@@ -6,6 +6,7 @@ from guru.views import HomeView
 
 pytestmark = pytest.mark.django_db
 
+
 class TestHomeView(TestCase):
 
     def test_canary(self):
@@ -14,7 +15,6 @@ class TestHomeView(TestCase):
     # def test_successful_load(self):
     #     response = self.client.get("/")
     #     self.assertEqual(response.status_code, 200)
-
 
     def test_title_set_in_context(self):
         request = RequestFactory().get("/")

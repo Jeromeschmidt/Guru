@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static i18n compress %}
+
+{% block content %}
+    <div id="topics">
+        <form action="/">
+            <label for="topics-options">Select the topics that apply:</label>
+            <br>
+            <select id="topics-options" name="topics-options" multiple>
+            {% for topic in topics %}
+                <option value="{{ topic }}">{{ topic }}</option>
+            {% endfor %}
+            </select>
+            <br>
+            <label for="description-area">Enter a little more about the issue:</label>
+            <br>
+            <textarea id="description-area"></textarea>
+            <br>
+            <input type="submit">
+        </form>
+    </div>
+{% endblock content %}
+{% block javascript %}
+    <script>
+        
+    </script>
+{% endblock javascript %}

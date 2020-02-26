@@ -6,7 +6,7 @@
     const langDropdownNode = $("#lang-dropdown");
     const curLangNode = langDropdownNode.find("button");
     const langOptionsMap = langDropdownItems();
-    const topSubdomain = topSubdomain();
+    const topSubdomain = window.location.host[0].toLowerCase();
     const curLanguage = (topSubdomain in langOptionsMap ? topSubdomain : "En");
 
     (function () {
@@ -28,9 +28,5 @@
             langNodeMap[optionText] = node;
         }
         return langNodeMap;
-    }
-
-    function topSubdomain() {
-        return window.location.host[0].toLowerCase();
     }
 })();

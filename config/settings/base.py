@@ -70,6 +70,7 @@ THIRD_PARTY_APPS = [
     "allauth.socialaccount",
     "rest_framework",
     "django_celery_beat",
+    "algoliasearch_django",
 ]
 
 LOCAL_APPS = [
@@ -307,3 +308,7 @@ INSTALLED_APPS += ["compressor"]
 STATICFILES_FINDERS += ["compressor.finders.CompressorFinder"]
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+BASE_DIR = ROOT_DIR
+
+ALGOLIA = {"APPLICATION_ID": "V0U0845ZUX", "API_KEY": env("ALGOLIA_API_KEY")}
