@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 
 from config.settings import env
+
+
 #@login_required
 class FindHelpView(TemplateView):
     template_name = "pages/find_help.html"
