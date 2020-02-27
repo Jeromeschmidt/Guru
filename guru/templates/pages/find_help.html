@@ -3,7 +3,7 @@
 
 {% block content %}
     <div id="topics">
-        <form action="/">
+        <form action="{% url 'confirmation' %}">
             <label for="topics-options">Select the topics that apply:</label>
             <br>
             <select id="topics-options" name="topics-options" multiple>

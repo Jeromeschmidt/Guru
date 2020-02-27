@@ -13,7 +13,7 @@ class User(AbstractUser):
     # First Name and Last Name do not cover name patterns
     # around the globe.
     name = CharField(_("Name of User"), blank=True, max_length=255)
-    is_customer = BooleanField(_("Customer Status"), default=True)
+    # is_customer = BooleanField(default=True) #
     # user = OneToOneField(User, on_delete=CASCADE, primary_key=True)
     skills = ArrayField(CharField(max_length=10, blank=True),
             size=8, null=True,

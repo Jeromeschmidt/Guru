@@ -1,6 +1,8 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.template import RequestContext
+from django.http import HttpResponse
 
 # from config.settings import env
 
@@ -13,8 +15,16 @@ class FindHelpView(TemplateView):
         context = super().get_context_data(**kwargs)
         context["title"] = "Find Help"
         context["topics"] = (None,) * 8
-        context["algolia-api-key"] = env("ALGOLIA_API_KEY")
+        # # context["algolia-api-key"] = env("ALGOLIA_API_KEY")
         return context
 
     def post(self, request, *args, **kwargs):
-        pass
+                return HttpResponse(render(request, 'pages/find_help.html',
+                   {}))
+
+class ConfirmationView(TemplateView):
+    template_name = "pages/confirmation.html"
+
+    def post(self, request, *args, **kwargs):
+                return HttpResponse(render(request, 'pages/confirmation.html',
+                   {}))
