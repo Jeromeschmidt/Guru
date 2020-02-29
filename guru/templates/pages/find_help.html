@@ -6,10 +6,10 @@
 
 {% block content %}
     <div id="skill_list">
-        <form action="{% url 'confirmation' %}">
+        <form action="{% url 'confirmation' %}" method="post">
             <label for="skill_list-options">Select the topics that apply:</label>
             <br>
-            <select id="skill_list-options" name="skill_list-options" multiple>
+            <select id="skill_list-options" name="skill_list-options" single>
             {% for skill in skill_list %}
                 <option value="{{ skill }}">{{ skill }}</option>
             {% endfor %}
