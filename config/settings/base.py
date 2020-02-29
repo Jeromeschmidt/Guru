@@ -70,7 +70,7 @@ THIRD_PARTY_APPS = [
     "allauth.socialaccount",
     "rest_framework",
     "django_celery_beat",
-    "algoliasearch_django",
+    # "algoliasearch_django",
 ]
 
 LOCAL_APPS = [
@@ -216,7 +216,7 @@ X_FRAME_OPTIONS = "DENY"
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
 EMAIL_BACKEND = env("DJANGO_EMAIL_BACKEND",
-                    default="django.core.mail.backends.smtp.EmailBackend")
+                    default="django.core.mail.backends.console.EmailBackend") #"django.core.mail.backends.smtp.EmailBackend")
 # https://docs.djangoproject.com/en/2.2/ref/settings/#email-timeout
 EMAIL_TIMEOUT = 5
 
@@ -311,4 +311,4 @@ STATICFILES_FINDERS += ["compressor.finders.CompressorFinder"]
 
 BASE_DIR = ROOT_DIR
 
-ALGOLIA = {"APPLICATION_ID": "V0U0845ZUX", "API_KEY": env("ALGOLIA_API_KEY")}
+# ALGOLIA = {"APPLICATION_ID": "V0U0845ZUX", "API_KEY": env("ALGOLIA_API_KEY")}

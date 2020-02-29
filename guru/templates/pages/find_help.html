@@ -5,14 +5,13 @@
 {% endblock css %}
 
 {% block content %}
-    <div id="topics">
+    <div id="skill_list">
         <form action="{% url 'confirmation' %}">
-            <label for="topics-options">Select the topics that apply:</label>
+            <label for="skill_list-options">Select the topics that apply:</label>
             <br>
-            <select id="topics-options" name="topics-options" multiple>
-            {% for topic in topics %}
-                {{ topic }}
-                <!-- <option value="{{ topic }}">{{ topic }}</option> -->
+            <select id="skill_list-options" name="skill_list-options" multiple>
+            {% for skill in skill_list %}
+                <option value="{{ skill }}">{{ skill }}</option>
             {% endfor %}
             </select>
             <br>
@@ -25,7 +24,6 @@
     </div>
 
 {% endblock content %}
-
 
 {% block javascript %}
 
