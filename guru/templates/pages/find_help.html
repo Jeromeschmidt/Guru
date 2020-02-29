@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load static i18n compress %}
 
+{% block css %} {{ block.super }}
+{% endblock css %}
+
 {% block content %}
     <div id="topics">
         <form action="{% url 'confirmation' %}">
