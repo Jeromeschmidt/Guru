@@ -14,9 +14,11 @@ class FindHelpView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["title"] = "Find Help"
-        context["topics"] = (None,) * 8
+        # context["topics"] = (None,) * 8
+        # context["topics"] = ("yes", "no") # * 8
+        topics = ["yes", "no"]
         # # context["algolia-api-key"] = env("ALGOLIA_API_KEY")
-        return context
+        return topics
 
     def post(self, request, *args, **kwargs):
                 return HttpResponse(render(request, 'pages/find_help.html',
