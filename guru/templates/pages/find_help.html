@@ -1,14 +1,18 @@
 {% extends "base.html" %}
 {% load static i18n compress %}
 
+{% block css %} {{ block.super }}
+{% endblock css %}
+
 {% block content %}
-    <div id="topics">
-        <form action="/">
-            <label for="topics-options">Select the topics that apply:</label>
+    <div id="skill_list">
+        <form action="{% url 'confirmation' %}" method="post">
+            {% csrf_token %}
+            <label for="skill_list-options">Select the topics that apply:</label>
             <br>
-            <select id="topics-options" name="topics-options" multiple>
-            {% for topic in topics %}
-                <option value="{{ topic }}">{{ topic }}</option>
+            <select id="skill_list-options" name="skill_list-options" single>
+            {% for skill in skill_list %}
+                <option value="{{ skill }}">{{ skill }}</option>
             {% endfor %}
             </select>
             <br>
@@ -19,9 +23,9 @@
             <input type="submit">
         </form>
     </div>
+
 {% endblock content %}
+
 {% block javascript %}
-    <script>
-        
-    </script>
+
 {% endblock javascript %}

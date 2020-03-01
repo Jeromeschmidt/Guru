@@ -4,6 +4,8 @@ from django.conf.urls.static import static
 from django.contrib import admin
 # from django.views.generic import TemplateView
 from django.views import defaults as default_views
+from api.views import Events
+from django.conf.urls import url
 
 urlpatterns = [
     path("", include("guru.urls")),
@@ -14,6 +16,8 @@ urlpatterns = [
     path("users/", include("guru.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     path('api/', include('api.urls')),
+    # url(r'^admin/', admin.site.urls),
+    url(r'^api/', Events.as_view()),
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

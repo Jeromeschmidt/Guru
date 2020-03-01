@@ -4,8 +4,8 @@ Base settings to build other settings files upon.
 
 import environ
 
-ROOT_DIR = (environ.Path(__file__) - 3
-           )  # (guru/config/settings/base.py - 3 = guru/)
+ROOT_DIR = (environ.Path(__file__) - 3)
+# (guru/config/settings/base.py - 3 = guru/)
 APPS_DIR = ROOT_DIR.path("guru")
 
 env = environ.Env()
@@ -70,7 +70,7 @@ THIRD_PARTY_APPS = [
     "allauth.socialaccount",
     "rest_framework",
     "django_celery_beat",
-    "algoliasearch_django",
+    # "algoliasearch_django",
 ]
 
 LOCAL_APPS = [
@@ -216,7 +216,7 @@ X_FRAME_OPTIONS = "DENY"
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
 EMAIL_BACKEND = env("DJANGO_EMAIL_BACKEND",
-                    default="django.core.mail.backends.smtp.EmailBackend")
+                    default="django.core.mail.backends.console.EmailBackend") #"django.core.mail.backends.smtp.EmailBackend")
 # https://docs.djangoproject.com/en/2.2/ref/settings/#email-timeout
 EMAIL_TIMEOUT = 5
 
@@ -293,6 +293,14 @@ ACCOUNT_ADAPTER = "guru.users.adapters.AccountAdapter"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 SOCIALACCOUNT_ADAPTER = "guru.users.adapters.SocialAccountAdapter"
 
+# SLACK API Configurations
+# ----------------------------------------------
+# use your keys
+SLACK_CLIENT_ID = '964294885047.950966324451'
+SLACK_CLIENT_SECRET = '9ec9fa84071026e86863214c0827b676'
+SLACK_VERIFICATION_TOKEN = 'aEWYqzEFrFv45q6FQQ5KIthI'
+SLACK_BOT_USER_TOKEN = 'xoxb-964294885047-964649805574-vRWyhknI7SG0o8inadasLi00'
+
 # django-compressor
 # ------------------------------------------------------------------------------
 # https://django-compressor.readthedocs.io/en/latest/quickstart/#installation
@@ -303,4 +311,4 @@ STATICFILES_FINDERS += ["compressor.finders.CompressorFinder"]
 
 BASE_DIR = ROOT_DIR
 
-ALGOLIA = {"APPLICATION_ID": "V0U0845ZUX", "API_KEY": env("ALGOLIA_API_KEY")}
+# ALGOLIA = {"APPLICATION_ID": "V0U0845ZUX", "API_KEY": env("ALGOLIA_API_KEY")}
