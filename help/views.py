@@ -47,7 +47,7 @@ class ConfirmationView(TemplateView):
         sender = "jerome.schmidt@students.makeschool.com"
         # cc_myself = form.cleaned_data['cc_myself']
 
-        recipients = ["jerome.schmidt@students.makeschool.com"]
+        recipients = [user.email]
         # if cc_myself:
         #     recipients.append(sender)
 
@@ -56,7 +56,7 @@ class ConfirmationView(TemplateView):
         return HttpResponse(render(request, 'pages/confirmation.html',
            {}))
 
-           
+
     def post(self, request, *args, **kwargs):
         return HttpResponse(render(request, 'pages/confirmation.html',
            {}))
