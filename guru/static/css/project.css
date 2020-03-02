@@ -11,3 +11,8 @@
   background-color: #f2dede;
   border-color: #eed3d7;
 }
+
+
+#confirm-image {
+  background: url("images/favicon/bg2.jpg");
+}
