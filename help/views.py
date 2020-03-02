@@ -60,3 +60,16 @@ class ConfirmationView(TemplateView):
     def post(self, request, *args, **kwargs):
         return HttpResponse(render(request, 'pages/confirmation.html',
            {}))
+
+class MatchView(TemplateView):
+    template_name = "pages/match.html"
+
+    def get(self, request):
+
+        return HttpResponse(render(request, 'pages/match.html',
+           {}))
+
+
+    def post(self, request, *args, **kwargs):
+        return HttpResponse(render(request, 'pages/match.html',
+           {}))
