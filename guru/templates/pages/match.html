@@ -1,4 +1,4 @@
-{% extend 'base.html' %}
+{% extends 'base.html' %}
 
 {% load static i18n compress %}
 
@@ -25,16 +25,16 @@
               <h4 class="card-title"><center>Special title treatment</center></h4>
               <p class="card-text"><center>Match data name etc</center></p>
             </div>
-            <div class="text-center"> 
+            <div class="text-center">
                 <button class="btn btn-danger btn-fab btn-fab-mini btn-round btn-lg">
                     <i class="material-icons">cancel</i>
-                </button> 
+                </button>
                 <button class="btn btn-success btn-fab btn-fab-mini btn-round btn-lg">
                     <i class="material-icons">check</i>
                 </button>
             </div>
             <footer>
-                <button class="btn btn-primary btn-link" href="">Back</button>
+                <button class="btn btn-primary btn-link" href="{% url 'confirmation' %}">Back</button>
             </footer>
           </div>
         </div>
