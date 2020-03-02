@@ -6,27 +6,45 @@
 
 {% block content %}
 <body>
-    <nav class="navbar navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <nav class="navbar navbar-color-on-scroll  fixed-top navbar-expand-lg"  color-on-scroll="100">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'find_help' %}">Guru </a>
+            <a class="navbar-brand" href="#">Guru</a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">
+                        <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true">
+                        Log out
+                        </button>
+                    </a>
+                </li>
+            </ul>
         </div>
     </nav>
     <div class="page-header">
         <div class="container">
             <div class="card card-nav-tabs text-center">
                 <div class="card-header card-header-info">
-                    pick your poison
+                    Pick Your Poison
                 </div>
                 <div id="skill_list">
                     <form action="{% url 'match' %}" method="post">
+                        <br>
                         {% csrf_token %}
                         <label for="skill_list-options">Select the topics that apply:</label>
                         <br>
-                        <select id="skill_list-options" name="skill_list-options" single>
                         {% for skill in skill_list %}
-                            <option value="{{ skill }}">{{ skill }}</option>
+                            <div class="row cols=3">
+                                <div class="form-check col">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="{{ skill }}">
+                                        {{ skill }}
+                                        <span class="form-check-sign">
+                                            <span class="check"></span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
                         {% endfor %}
-                        </select>
                         <br>
                         <!-- <label for="description-area">Enter a little more about the issue:</label> -->
                         <br>
