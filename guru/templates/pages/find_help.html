@@ -18,7 +18,7 @@
                     pick your poison
                 </div>
                 <div id="skill_list">
-                    <form action="{% url 'confirmation' %}" method="post">
+                    <form action="{% url 'confirmation' %}">
                         {% csrf_token %}
                         <label for="skill_list-options">Select the topics that apply:</label>
                         <br>
