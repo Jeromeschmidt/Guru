@@ -41,7 +41,6 @@ class ConfirmationView(TemplateView):
     def get(self, request):
         # form = NameForm(request.POST)
         # django_send_mail('Subject here', 'Here is the message', 'from@example.com', ['first@example.com', 'other@example.com'])
-        print(request.GET)
         subject = request.GET['skill_list-options']
         message = "I need help with " + subject
         sender = "jerome.schmidt@students.makeschool.com"
