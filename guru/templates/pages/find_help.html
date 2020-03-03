@@ -18,7 +18,7 @@
                     pick your poison
                 </div>
                 <div id="skill_list">
-                    <form action="{% url 'match' %}" method="post">
+                    <form action="{% url 'confirmation' %}" method="post">
                         {% csrf_token %}
                         <label for="skill_list-options">Select the topics that apply:</label>
                         <br>
@@ -35,10 +35,10 @@
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                         <div class="card-body">
-                            <!-- <input type="submit"> -->
-                            <a href="{% url 'match' %}" class="btn btn-info" type="submit">Go somewhere</a>
+                            <input type="submit">
+                            <!-- <a href="{% url 'confirmation' %}" class="btn btn-info" type="submit">Go somewhere</a> -->
                         </div>
-                        
+
                     </form>
                 </div>
             </div>
