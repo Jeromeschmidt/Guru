@@ -28,7 +28,7 @@ algoliasearch-django==1.7.1 # https://www.algolia.com/doc/framework-integration/
 # Asynchronous
 async-timeout==3.0.1
 asyncio==3.4.3
-aiohttp==3.6.2
+aiohttp==3.7.4
 
 # Heroku
 django-heroku
